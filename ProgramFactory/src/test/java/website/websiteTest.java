@@ -76,7 +76,7 @@ class websiteTest {
     void websiteProjectTeamFactoryTest() {
         ProjectTeamFactory teamFactory = new WebsiteTeamFactory();
 
-        // Создание команды проекта с использованием WebsiteTeamFactory
+        
         Developer developer = teamFactory.getDeveloper();
         Tester tester = teamFactory.getTester();
         ProjectManager projectManager = teamFactory.getProjectManager();
@@ -85,7 +85,7 @@ class websiteTest {
         tester.testCode();
         projectManager.manageProject();
 
-        // Замените вывод на консоль на проверку ожидаемого результата
+        
         Assertions.assertEquals("PHP developer writes PHP code... Website Tester tests site... Website project manager manages website project...",
                 developer.getStringResult() + " " + tester.getStringResult() + " " + projectManager.getStringResult());
     }
@@ -94,15 +94,15 @@ class websiteTest {
     void websiteProjectExecutionTest() {
         ProjectTeamFactory teamFactory = new WebsiteTeamFactory();
 
-        // Создание команды проекта с использованием WebsiteTeamFactory
+        
         Developer developer = teamFactory.getDeveloper();
         Tester tester = teamFactory.getTester();
         ProjectManager projectManager = teamFactory.getProjectManager();
 
-        // Имитация выполнения проекта
+        
         String projectExecutionResult = executeWebsiteProject(developer, tester, projectManager);
 
-        // Замените вывод на консоль на проверку ожидаемого результата
+        
         Assertions.assertEquals("PHP developer writes PHP code... Website Tester tests site... Website project manager manages website project... Project execution is successful.",
                 projectExecutionResult);
     }
